@@ -6,12 +6,15 @@ public class PlayerMovement : MonoBehaviour
 {
     private float horizontal;              // Stores horizontal input (-1 for left, 1 for right, 0 for none)
     private float speed = 8f;              // Movement speed multiplier
+    private float sprintSpeed = 12f;
     private float jumpingPower = 16f;      // Force applied when the player jumps
     private bool isFacingRight = true;     // Tracks which way the player sprite is currently facing
 
     [SerializeField] private Rigidbody2D rb;        // Reference to Rigidbody2D for movement physics
     [SerializeField] private Transform groundCheck; // Position below player to check if grounded
     [SerializeField] private LayerMask groundLayer; // Defines what counts as "ground"
+
+    [SerializeField] private bool canSprint = true;
 
     // Called every frame (handles input and simple logic)
     private void Update()
@@ -36,7 +39,16 @@ public class PlayerMovement : MonoBehaviour
     // Called on a fixed time interval (better for physics updates)
     private void FixedUpdate()
     {
-        rb.linearVelocity = new Vector2(horizontal * speed, rb.linearVelocity.y); // Apply horizontal movement, keep current vertical velocity
+        // Decide which speed to use
+        float currentSpeed = speed;
+
+        if (canSprint &&  Input.GetKey(KeyCode.LeftShift))
+        {
+            currentSpeed = sprintSpeed;
+        }
+
+        rb.linearVelocity = new Vector2(horizontal * currentSpeed, rb.linearVelocity.y); // Apply horizontal movement, keep current vertical velocity
+
     }
 
     // Checks if the player is standing on the ground
