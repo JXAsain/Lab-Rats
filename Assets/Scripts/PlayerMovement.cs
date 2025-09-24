@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
     private float speed = 8f;              // Movement speed multiplier
     private float sprintSpeed = 12f;
     private float jumpingPower = 16f;      // Force applied when the player jumps
+    private float fastDropSpeed = -20f;    // Force applied when fast dropping
     private bool isFacingRight = true;     // Tracks which way the player sprite is currently facing
 
     [SerializeField] private Rigidbody2D rb;        // Reference to Rigidbody2D for movement physics
@@ -15,6 +16,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private LayerMask groundLayer; // Defines what counts as "ground"
 
     [SerializeField] private bool canSprint = true;
+    [SerializeField] private bool canFastDrop = true;
 
     // Called every frame (handles input and simple logic)
     private void Update()
@@ -31,6 +33,12 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetButtonUp("Jump") && rb.linearVelocity.y > 0f)
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, rb.linearVelocity.y * 0.5f); // Reduce upward velocity
+        }
+
+        // Fast Drop
+        if (!IsGrounded() && canFastDrop && Input.GetAxisRaw("Vertical") < 0)  
+        {
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, fastDropSpeed);
         }
 
         Flip(); // Flip sprite direction if player changes movement direction
