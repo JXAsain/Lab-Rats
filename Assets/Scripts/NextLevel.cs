@@ -18,8 +18,11 @@ public class NextLevel : MonoBehaviour
         if(other.tag == "Player")
         {
             // Player entered, so move level
-            Debug.Log("Switching Scene to " + sceneBuildIndex);
+            Debug.Log("Switching Scene from " + SceneManager.GetActiveScene().name);
+
             SceneManager.LoadScene(sceneBuildIndex, LoadSceneMode.Single);
+
         }
+
     }
 }
