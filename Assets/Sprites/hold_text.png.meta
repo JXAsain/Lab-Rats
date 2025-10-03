@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: 32467db6638ff074db9c9276611a4eeb
+guid: 625b4980a12284d459ebc6605ba3918c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -147440301830674123
-    second: graffiti_spray_arrw_right_0
+      213: -2919183802250188803
+    second: hold_text_0
+  - first:
+      213: 3805438634812175571
+    second: hold_text_1
+  - first:
+      213: 299120496321157063
+    second: hold_text_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +106,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: graffiti_spray_arrw_right_0
+      name: hold_text_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 64
-        height: 64
+        y: 37
+        width: 19
+        height: 26
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +121,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5396ecf93df24fdf0800000000000000
-      internalID: -147440301830674123
+      spriteID: df7adc06cc9fc77d0800000000000000
+      internalID: -2919183802250188803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hold_text_1
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 36
+        width: 34
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d4f68ab642afc430800000000000000
+      internalID: 3805438634812175571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hold_text_2
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 35
+        width: 16
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c7d240b180b62400800000000000000
+      internalID: 299120496321157063
       vertices: []
       indices: 
       edges: []
@@ -125,7 +175,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 3803a401b06cdaa40821f7b77fe4e356
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +185,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      graffiti_spray_arrw_right_0: -147440301830674123
+      hold_text_0: -2919183802250188803
+      hold_text_1: 3805438634812175571
+      hold_text_2: 299120496321157063
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

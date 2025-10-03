@@ -1,10 +1,22 @@
 fileFormatVersion: 2
-guid: 32467db6638ff074db9c9276611a4eeb
+guid: 0b61150ede467c74da2e73eafd696543
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -147440301830674123
-    second: graffiti_spray_arrw_right_0
+      213: 6575599965301598690
+    second: hold_shift_0
+  - first:
+      213: 7945146514106058380
+    second: hold_shift_1
+  - first:
+      213: -4589816981017452889
+    second: hold_shift_2
+  - first:
+      213: 6498172034408525188
+    second: hold_shift_3
+  - first:
+      213: 5375049120185106496
+    second: hold_shift_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,7 +112,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: graffiti_spray_arrw_right_0
+      name: hold_shift_0
       rect:
         serializedVersion: 2
         x: 0
@@ -115,8 +127,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5396ecf93df24fdf0800000000000000
-      internalID: -147440301830674123
+      spriteID: 2e96fd45459314b50800000000000000
+      internalID: 6575599965301598690
       vertices: []
       indices: 
       edges: []
@@ -125,7 +137,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 3803a401b06cdaa40821f7b77fe4e356
+    spriteID: c291084cda0fca940a612e63fd89b092
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +147,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      graffiti_spray_arrw_right_0: -147440301830674123
+      hold_shift_0: 6575599965301598690
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
