@@ -4486,7 +4486,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3155787557535311580, guid: a321069a34a1d064a88ac9bb85177caa, type: 3}
       propertyPath: dropSpeed
-      value: 15
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 3155787557535311580, guid: a321069a34a1d064a88ac9bb85177caa, type: 3}
+      propertyPath: pauseTime
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 3155787557535311580, guid: a321069a34a1d064a88ac9bb85177caa, type: 3}
       propertyPath: playerSpawn
@@ -4494,7 +4498,7 @@ PrefabInstance:
       objectReference: {fileID: 1100277381}
     - target: {fileID: 3155787557535311580, guid: a321069a34a1d064a88ac9bb85177caa, type: 3}
       propertyPath: dropDistance
-      value: 15
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 3876737396021398560, guid: a321069a34a1d064a88ac9bb85177caa, type: 3}
       propertyPath: m_Name
@@ -6613,11 +6617,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3155787557535311580, guid: a321069a34a1d064a88ac9bb85177caa, type: 3}
       propertyPath: dropSpeed
-      value: 15
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 3155787557535311580, guid: a321069a34a1d064a88ac9bb85177caa, type: 3}
       propertyPath: pauseTime
-      value: 1
+      value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: 3155787557535311580, guid: a321069a34a1d064a88ac9bb85177caa, type: 3}
       propertyPath: playerSpawn
@@ -6625,7 +6629,7 @@ PrefabInstance:
       objectReference: {fileID: 1100277381}
     - target: {fileID: 3155787557535311580, guid: a321069a34a1d064a88ac9bb85177caa, type: 3}
       propertyPath: dropDistance
-      value: 15
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 3876737396021398560, guid: a321069a34a1d064a88ac9bb85177caa, type: 3}
       propertyPath: m_Name
@@ -7059,7 +7063,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3155787557535311580, guid: a321069a34a1d064a88ac9bb85177caa, type: 3}
       propertyPath: dropSpeed
-      value: 15
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 3155787557535311580, guid: a321069a34a1d064a88ac9bb85177caa, type: 3}
       propertyPath: pauseTime
@@ -7071,7 +7075,7 @@ PrefabInstance:
       objectReference: {fileID: 1100277381}
     - target: {fileID: 3155787557535311580, guid: a321069a34a1d064a88ac9bb85177caa, type: 3}
       propertyPath: dropDistance
-      value: 15
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 3876737396021398560, guid: a321069a34a1d064a88ac9bb85177caa, type: 3}
       propertyPath: m_Name
