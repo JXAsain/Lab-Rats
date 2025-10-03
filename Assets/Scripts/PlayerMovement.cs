@@ -42,6 +42,11 @@ public class PlayerMovement : MonoBehaviour
         }
 
         Flip(); // Flip sprite direction if player changes movement direction
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
     }
 
     // Called on a fixed time interval (better for physics updates)
