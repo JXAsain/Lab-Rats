@@ -1010,6 +1010,71 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &299269048
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 696409957717840780, guid: 1938ff91193bdc5458c10a5ccdb1f334, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 696409957717840780, guid: 1938ff91193bdc5458c10a5ccdb1f334, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 696409957717840780, guid: 1938ff91193bdc5458c10a5ccdb1f334, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 696409957717840780, guid: 1938ff91193bdc5458c10a5ccdb1f334, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 696409957717840780, guid: 1938ff91193bdc5458c10a5ccdb1f334, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 696409957717840780, guid: 1938ff91193bdc5458c10a5ccdb1f334, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 696409957717840780, guid: 1938ff91193bdc5458c10a5ccdb1f334, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 696409957717840780, guid: 1938ff91193bdc5458c10a5ccdb1f334, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 696409957717840780, guid: 1938ff91193bdc5458c10a5ccdb1f334, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 696409957717840780, guid: 1938ff91193bdc5458c10a5ccdb1f334, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1027750629408773046, guid: 1938ff91193bdc5458c10a5ccdb1f334, type: 3}
+      propertyPath: canSprint
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1027750629408773046, guid: 1938ff91193bdc5458c10a5ccdb1f334, type: 3}
+      propertyPath: canFastDrop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7812797755063619204, guid: 1938ff91193bdc5458c10a5ccdb1f334, type: 3}
+      propertyPath: m_Name
+      value: Remi
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 1938ff91193bdc5458c10a5ccdb1f334, type: 3}
 --- !u!1 &333535492
 GameObject:
   m_ObjectHideFlags: 0
@@ -1022,6 +1087,7 @@ GameObject:
   - component: {fileID: 333535496}
   - component: {fileID: 333535495}
   - component: {fileID: 333535494}
+  - component: {fileID: 333535497}
   m_Layer: 0
   m_Name: Electric Pole (2)
   m_TagString: Hazard
@@ -1161,6 +1227,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &333535497
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 333535492}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7a37242c8a607042a8c3271cb931d59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: 1922014845489682711, guid: 74ab1c8c95a09a44cb0cbdae2782e016, type: 3}
+  - {fileID: -7209643430026270035, guid: 11cb0d5ac0a07af45ad483fd83fbc938, type: 3}
 --- !u!1 &334197137
 GameObject:
   m_ObjectHideFlags: 0
@@ -3065,6 +3146,7 @@ GameObject:
   - component: {fileID: 863817683}
   - component: {fileID: 863817682}
   - component: {fileID: 863817681}
+  - component: {fileID: 863817684}
   m_Layer: 0
   m_Name: Electric Pole (1)
   m_TagString: Hazard
@@ -3204,6 +3286,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &863817684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 863817679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7a37242c8a607042a8c3271cb931d59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: 1922014845489682711, guid: 74ab1c8c95a09a44cb0cbdae2782e016, type: 3}
+  - {fileID: -7209643430026270035, guid: 11cb0d5ac0a07af45ad483fd83fbc938, type: 3}
 --- !u!1 &948363963
 GameObject:
   m_ObjectHideFlags: 0
@@ -4039,72 +4136,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &1118984416
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 328681381300112619, guid: 2eaf5744689777842bee82e3ea2f3a6e, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.120158434
-      objectReference: {fileID: 0}
-    - target: {fileID: 328681381300112619, guid: 2eaf5744689777842bee82e3ea2f3a6e, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.29976666
-      objectReference: {fileID: 0}
-    - target: {fileID: 328681381300112619, guid: 2eaf5744689777842bee82e3ea2f3a6e, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 328681381300112619, guid: 2eaf5744689777842bee82e3ea2f3a6e, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 328681381300112619, guid: 2eaf5744689777842bee82e3ea2f3a6e, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 328681381300112619, guid: 2eaf5744689777842bee82e3ea2f3a6e, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 328681381300112619, guid: 2eaf5744689777842bee82e3ea2f3a6e, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 328681381300112619, guid: 2eaf5744689777842bee82e3ea2f3a6e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 328681381300112619, guid: 2eaf5744689777842bee82e3ea2f3a6e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 328681381300112619, guid: 2eaf5744689777842bee82e3ea2f3a6e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4390691466886691606, guid: 2eaf5744689777842bee82e3ea2f3a6e, type: 3}
-      propertyPath: canFastDrop
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8908087633962529247, guid: 2eaf5744689777842bee82e3ea2f3a6e, type: 3}
-      propertyPath: m_Name
-      value: Remi
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 2eaf5744689777842bee82e3ea2f3a6e, type: 3}
---- !u!1 &1118984417 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8908087633962529247, guid: 2eaf5744689777842bee82e3ea2f3a6e, type: 3}
-  m_PrefabInstance: {fileID: 1118984416}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1127660817
 GameObject:
   m_ObjectHideFlags: 0
@@ -4316,7 +4347,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 0.2}
+  m_Size: {x: 1.15, y: 0.15}
   m_EdgeRadius: 0
 --- !u!212 &1140175365
 SpriteRenderer:
@@ -4373,6 +4404,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1219690324 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7812797755063619204, guid: 1938ff91193bdc5458c10a5ccdb1f334, type: 3}
+  m_PrefabInstance: {fileID: 299269048}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1231334102
 GameObject:
   m_ObjectHideFlags: 0
@@ -4461,7 +4497,7 @@ PrefabInstance:
     - target: {fileID: 7011825745105626914, guid: e1419987010d46846a844b04d2964063, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 1118984417}
+      objectReference: {fileID: 1219690324}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4866,6 +4902,7 @@ GameObject:
   - component: {fileID: 1322586609}
   - component: {fileID: 1322586608}
   - component: {fileID: 1322586607}
+  - component: {fileID: 1322586610}
   m_Layer: 0
   m_Name: Electric Pole (1)
   m_TagString: Hazard
@@ -5005,6 +5042,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1322586610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1322586605}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7a37242c8a607042a8c3271cb931d59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: 1922014845489682711, guid: 74ab1c8c95a09a44cb0cbdae2782e016, type: 3}
+  - {fileID: -7209643430026270035, guid: 11cb0d5ac0a07af45ad483fd83fbc938, type: 3}
 --- !u!1 &1335523686
 GameObject:
   m_ObjectHideFlags: 0
@@ -5584,6 +5636,7 @@ GameObject:
   - component: {fileID: 1525085897}
   - component: {fileID: 1525085896}
   - component: {fileID: 1525085895}
+  - component: {fileID: 1525085898}
   m_Layer: 0
   m_Name: Electric Pole
   m_TagString: Hazard
@@ -5723,6 +5776,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1525085898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1525085893}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7a37242c8a607042a8c3271cb931d59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: 1922014845489682711, guid: 74ab1c8c95a09a44cb0cbdae2782e016, type: 3}
+  - {fileID: -7209643430026270035, guid: 11cb0d5ac0a07af45ad483fd83fbc938, type: 3}
 --- !u!1 &1528924868
 GameObject:
   m_ObjectHideFlags: 0
@@ -6297,6 +6365,7 @@ GameObject:
   - component: {fileID: 1660166033}
   - component: {fileID: 1660166032}
   - component: {fileID: 1660166031}
+  - component: {fileID: 1660166034}
   m_Layer: 0
   m_Name: Electric Pole
   m_TagString: Hazard
@@ -6436,6 +6505,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1660166034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1660166029}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7a37242c8a607042a8c3271cb931d59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: 1922014845489682711, guid: 74ab1c8c95a09a44cb0cbdae2782e016, type: 3}
+  - {fileID: -7209643430026270035, guid: 11cb0d5ac0a07af45ad483fd83fbc938, type: 3}
 --- !u!1 &1716660026
 GameObject:
   m_ObjectHideFlags: 0
@@ -7297,10 +7381,10 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1563015124}
-  - {fileID: 1118984416}
   - {fileID: 1252003472}
   - {fileID: 1117368782}
   - {fileID: 1231334103}
   - {fileID: 334197138}
   - {fileID: 2023317575}
   - {fileID: 393877436}
+  - {fileID: 299269048}
