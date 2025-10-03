@@ -63,7 +63,7 @@ public class PlayerMovement : MonoBehaviour
     private bool IsGrounded()
     {
         // Creates an invisible circle at groundCheck's position, checks collision with groundLayer
-        return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
+        return Physics2D.OverlapCircle(groundCheck.position, 1f, groundLayer);
     }
 
     // Flips the player sprite if moving left/right opposite to current facing direction
