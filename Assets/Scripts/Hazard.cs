@@ -1,6 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
+using UnityEngine.SceneManagement;
+
 public class VerticalHazard : MonoBehaviour
 {
     [Header("Movement Settings")]
@@ -11,9 +14,9 @@ public class VerticalHazard : MonoBehaviour
     private Vector3 startPos;
     private Vector3 endPos;
 
-    [Header("Player Respawn")]
-    [SerializeField] private Transform playerSpawn; // Drag spawn point here
-
+    [Header("Current Scene")]
+    //[SerializeField] private Transform playerSpawn; // Drag spawn point here
+    [SerializeField] private int currentSceneID;
     private void Start()
     {
         startPos = transform.position;
@@ -53,13 +56,17 @@ public class VerticalHazard : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            // Reset player to spawn
-            collision.transform.position = playerSpawn.position;
+            //// Reset player to spawn
+            //collision.transform.position = playerSpawn.position;
 
-            // Reset velocity so player doesn't keep falling
-            Rigidbody2D rb = collision.GetComponent<Rigidbody2D>();
-            if (rb != null)
-                rb.linearVelocity = Vector2.zero;
+            //// Reset velocity so player doesn't keep falling
+            //Rigidbody2D rb = collision.GetComponent<Rigidbody2D>();
+            //if (rb != null)
+            //    rb.linearVelocity = Vector2.zero;
+
+            SceneManager.LoadScene(currentSceneID, LoadSceneMode.Single);
+
+
         }
     }
 }
