@@ -1212,7 +1212,7 @@ MonoBehaviour:
   dropSpeed: 0
   pauseTime: 0
   dropDistance: 0
-  playerSpawn: {fileID: 1117368782}
+  currentSceneID: 0
 --- !u!61 &333535495
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1257,7 +1257,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.2, y: 0.44}
+  m_Size: {x: 0.15, y: 0.4}
   m_EdgeRadius: 0
 --- !u!212 &333535496
 SpriteRenderer:
@@ -1329,6 +1329,7 @@ MonoBehaviour:
   sprites:
   - {fileID: 1922014845489682711, guid: 74ab1c8c95a09a44cb0cbdae2782e016, type: 3}
   - {fileID: -7209643430026270035, guid: 11cb0d5ac0a07af45ad483fd83fbc938, type: 3}
+  switchInterval: 0.2
 --- !u!1 &334197137
 GameObject:
   m_ObjectHideFlags: 0
@@ -3445,7 +3446,7 @@ MonoBehaviour:
   dropSpeed: 0
   pauseTime: 0
   dropDistance: 0
-  playerSpawn: {fileID: 1117368782}
+  currentSceneID: 0
 --- !u!61 &863817682
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3490,7 +3491,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.2, y: 0.44}
+  m_Size: {x: 0.15, y: 0.4}
   m_EdgeRadius: 0
 --- !u!212 &863817683
 SpriteRenderer:
@@ -3562,6 +3563,7 @@ MonoBehaviour:
   sprites:
   - {fileID: 1922014845489682711, guid: 74ab1c8c95a09a44cb0cbdae2782e016, type: 3}
   - {fileID: -7209643430026270035, guid: 11cb0d5ac0a07af45ad483fd83fbc938, type: 3}
+  switchInterval: 0.2
 --- !u!1 &948363963
 GameObject:
   m_ObjectHideFlags: 0
@@ -5201,7 +5203,7 @@ MonoBehaviour:
   dropSpeed: 0
   pauseTime: 0
   dropDistance: 0
-  playerSpawn: {fileID: 1117368782}
+  currentSceneID: 0
 --- !u!61 &1322586608
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5246,7 +5248,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.2, y: 0.44}
+  m_Size: {x: 0.15, y: 0.4}
   m_EdgeRadius: 0
 --- !u!212 &1322586609
 SpriteRenderer:
@@ -5318,6 +5320,7 @@ MonoBehaviour:
   sprites:
   - {fileID: 1922014845489682711, guid: 74ab1c8c95a09a44cb0cbdae2782e016, type: 3}
   - {fileID: -7209643430026270035, guid: 11cb0d5ac0a07af45ad483fd83fbc938, type: 3}
+  switchInterval: 0.2
 --- !u!1 &1335523686
 GameObject:
   m_ObjectHideFlags: 0
@@ -5935,7 +5938,7 @@ MonoBehaviour:
   dropSpeed: 0
   pauseTime: 0
   dropDistance: 0
-  playerSpawn: {fileID: 1117368782}
+  currentSceneID: 0
 --- !u!61 &1525085896
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5980,7 +5983,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.2, y: 0.44}
+  m_Size: {x: 0.15, y: 0.4}
   m_EdgeRadius: 0
 --- !u!212 &1525085897
 SpriteRenderer:
@@ -6052,6 +6055,7 @@ MonoBehaviour:
   sprites:
   - {fileID: 1922014845489682711, guid: 74ab1c8c95a09a44cb0cbdae2782e016, type: 3}
   - {fileID: -7209643430026270035, guid: 11cb0d5ac0a07af45ad483fd83fbc938, type: 3}
+  switchInterval: 0.2
 --- !u!1 &1528924868
 GameObject:
   m_ObjectHideFlags: 0
@@ -7486,6 +7490,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1231334103}
     m_Modifications:
+    - target: {fileID: 1129492458847753266, guid: 1ab1db73b15dd8649813f778da8ce7a2, type: 3}
+      propertyPath: switchInterval
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1303187992254778802, guid: 1ab1db73b15dd8649813f778da8ce7a2, type: 3}
+      propertyPath: m_Size.x
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1303187992254778802, guid: 1ab1db73b15dd8649813f778da8ce7a2, type: 3}
+      propertyPath: m_Size.y
+      value: 0.4
+      objectReference: {fileID: 0}
     - target: {fileID: 5140492152844671935, guid: 1ab1db73b15dd8649813f778da8ce7a2, type: 3}
       propertyPath: m_Name
       value: Electric Pole

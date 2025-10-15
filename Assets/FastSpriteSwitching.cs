@@ -1,10 +1,12 @@
-using UnityEngine;
+﻿using UnityEngine;
+using System.Collections; 
 
 public class FastSpriteSwitching : MonoBehaviour
 {
     public Sprite[] sprites;
     private SpriteRenderer spriteRenderer;
     private int currentIndex = 0;
+    public float switchInterval = 0.2f; // half a second between switches
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -19,7 +21,9 @@ public class FastSpriteSwitching : MonoBehaviour
         if (sprites.Length > 0) 
         { 
             spriteRenderer.sprite = sprites[currentIndex];
-        } 
+            StartCoroutine(SwitchSpriteLoop());
+
+        }
     }
 
     public void SwitchToNextSprite()
@@ -30,9 +34,12 @@ public class FastSpriteSwitching : MonoBehaviour
         spriteRenderer.sprite = sprites[currentIndex];
     }
 
-    // Update is called once per frame
-    void Update()
+    private IEnumerator SwitchSpriteLoop()
     {
-        SwitchToNextSprite();
+        while (true)
+        {
+            yield return new WaitForSeconds(switchInterval);
+            SwitchToNextSprite();
+        }
     }
 }
