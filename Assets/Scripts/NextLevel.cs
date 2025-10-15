@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -12,9 +13,18 @@ public class NextLevel : MonoBehaviour
 
     public float transitionTime = 1f;
 
+    public int currentSceneID;
+
+
     // Level move zoned enter, if collider is a player
     // Move game to another scene
-
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            SceneManager.LoadScene(currentSceneID, LoadSceneMode.Single);
+        }
+    }
     private void OnTriggerEnter2D(Collider2D other)
     {
         Debug.Log("Trigger Entered");

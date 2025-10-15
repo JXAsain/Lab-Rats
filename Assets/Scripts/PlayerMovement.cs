@@ -1,6 +1,6 @@
 using System.Collections;                 
 using System.Collections.Generic;         
-using UnityEngine;                        
+using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -17,6 +17,7 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] private bool canSprint = true;
     [SerializeField] private bool canFastDrop = true;
+
 
     // Called every frame (handles input and simple logic)
     private void Update()
@@ -47,6 +48,8 @@ public class PlayerMovement : MonoBehaviour
         {
             Application.Quit();
         }
+
+      
     }
 
     // Called on a fixed time interval (better for physics updates)
