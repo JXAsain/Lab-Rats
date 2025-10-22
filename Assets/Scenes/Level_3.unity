@@ -749,6 +749,10 @@ PrefabInstance:
       propertyPath: dropDistance
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3155787557535311580, guid: a321069a34a1d064a88ac9bb85177caa, type: 3}
+      propertyPath: currentSceneID
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3876737396021398560, guid: a321069a34a1d064a88ac9bb85177caa, type: 3}
       propertyPath: m_Name
       value: Outbound Zone
@@ -3086,7 +3090,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2488176207809487708, guid: e1419987010d46846a844b04d2964063, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2488176207809487708, guid: e1419987010d46846a844b04d2964063, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3179,6 +3183,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5976654751247521247, guid: 19ced83d54658c845ae93b020750d18f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7612970208837070171, guid: 19ced83d54658c845ae93b020750d18f, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -2888
+      objectReference: {fileID: 0}
+    - target: {fileID: 7612970208837070171, guid: 19ced83d54658c845ae93b020750d18f, type: 3}
+      propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -7254,6 +7266,10 @@ PrefabInstance:
       propertyPath: playerSpawn
       value: 
       objectReference: {fileID: 505301208}
+    - target: {fileID: 6583206545093379795, guid: 1ab1db73b15dd8649813f778da8ce7a2, type: 3}
+      propertyPath: currentSceneID
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 8878067853393897430, guid: 1ab1db73b15dd8649813f778da8ce7a2, type: 3}
       propertyPath: m_Sprite
       value: 
