@@ -1212,7 +1212,7 @@ MonoBehaviour:
   dropSpeed: 0
   pauseTime: 0
   dropDistance: 0
-  currentSceneID: 1
+  currentSceneID: 2
 --- !u!61 &333535495
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3454,7 +3454,7 @@ MonoBehaviour:
   dropSpeed: 0
   pauseTime: 0
   dropDistance: 0
-  currentSceneID: 1
+  currentSceneID: 2
 --- !u!61 &863817682
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5211,7 +5211,7 @@ MonoBehaviour:
   dropSpeed: 0
   pauseTime: 0
   dropDistance: 0
-  currentSceneID: 1
+  currentSceneID: 2
 --- !u!61 &1322586608
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5946,7 +5946,7 @@ MonoBehaviour:
   dropSpeed: 0
   pauseTime: 0
   dropDistance: 0
-  currentSceneID: 1
+  currentSceneID: 2
 --- !u!61 &1525085896
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7181,7 +7181,7 @@ PrefabInstance:
       objectReference: {fileID: 672852966}
     - target: {fileID: 4250353920866114490, guid: ba3ea0710e7981b4eb828a926e14048c, type: 3}
       propertyPath: sceneBuildIndex
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7560,7 +7560,7 @@ PrefabInstance:
       objectReference: {fileID: 1117368782}
     - target: {fileID: 6583206545093379795, guid: 1ab1db73b15dd8649813f778da8ce7a2, type: 3}
       propertyPath: currentSceneID
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

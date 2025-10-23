@@ -398,7 +398,7 @@ PrefabInstance:
       objectReference: {fileID: 801867750}
     - target: {fileID: 4250353920866114490, guid: ba3ea0710e7981b4eb828a926e14048c, type: 3}
       propertyPath: sceneBuildIndex
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -751,7 +751,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3155787557535311580, guid: a321069a34a1d064a88ac9bb85177caa, type: 3}
       propertyPath: currentSceneID
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3876737396021398560, guid: a321069a34a1d064a88ac9bb85177caa, type: 3}
       propertyPath: m_Name
@@ -7056,7 +7056,7 @@ PrefabInstance:
       objectReference: {fileID: 505301208}
     - target: {fileID: 6583206545093379795, guid: 1ab1db73b15dd8649813f778da8ce7a2, type: 3}
       propertyPath: currentSceneID
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8878067853393897430, guid: 1ab1db73b15dd8649813f778da8ce7a2, type: 3}
       propertyPath: m_Sprite
@@ -7673,6 +7673,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 664159770355546637, guid: ba357f66e9093c14a830e51264447fd4, type: 3}
+      propertyPath: currentSceneID
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 1245709919193902191, guid: ba357f66e9093c14a830e51264447fd4, type: 3}
       propertyPath: m_Name
       value: Gator

@@ -4500,6 +4500,10 @@ PrefabInstance:
       propertyPath: dropDistance
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 3155787557535311580, guid: a321069a34a1d064a88ac9bb85177caa, type: 3}
+      propertyPath: currentSceneID
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3876737396021398560, guid: a321069a34a1d064a88ac9bb85177caa, type: 3}
       propertyPath: m_Name
       value: Laser (2)
@@ -4580,7 +4584,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03fc22fda987e844d925f82cd5f7b4ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneBuildIndex: 1
+  sceneBuildIndex: 2
   transition: {fileID: 1934591982}
   transitionTime: 1
   currentSceneID: 0
@@ -6632,6 +6636,10 @@ PrefabInstance:
       propertyPath: dropDistance
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 3155787557535311580, guid: a321069a34a1d064a88ac9bb85177caa, type: 3}
+      propertyPath: currentSceneID
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3876737396021398560, guid: a321069a34a1d064a88ac9bb85177caa, type: 3}
       propertyPath: m_Name
       value: Laser (1)
@@ -7077,6 +7085,10 @@ PrefabInstance:
     - target: {fileID: 3155787557535311580, guid: a321069a34a1d064a88ac9bb85177caa, type: 3}
       propertyPath: dropDistance
       value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 3155787557535311580, guid: a321069a34a1d064a88ac9bb85177caa, type: 3}
+      propertyPath: currentSceneID
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3876737396021398560, guid: a321069a34a1d064a88ac9bb85177caa, type: 3}
       propertyPath: m_Name
