@@ -6650,6 +6650,23 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1245709919193902191, guid: ba357f66e9093c14a830e51264447fd4, type: 3}
   m_PrefabInstance: {fileID: 5270476605327660358}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1828571766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1828571761}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7a37242c8a607042a8c3271cb931d59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: -1710879289342719785, guid: 3e288f3c97706be49ac714734b02e275, type: 3}
+  - {fileID: -134969597513695885, guid: f0d5978eca726de48a520743c36e6884, type: 3}
+  - {fileID: 3305685054942234606, guid: 101c936b12b636446a21ddad86ed8e90, type: 3}
+  switchInterval: 0.1
 --- !u!1 &1836331197
 GameObject:
   m_ObjectHideFlags: 0
@@ -7674,12 +7691,20 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 664159770355546637, guid: ba357f66e9093c14a830e51264447fd4, type: 3}
+      propertyPath: moveSpeed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 664159770355546637, guid: ba357f66e9093c14a830e51264447fd4, type: 3}
       propertyPath: currentSceneID
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1245709919193902191, guid: ba357f66e9093c14a830e51264447fd4, type: 3}
       propertyPath: m_Name
       value: Gator
+      objectReference: {fileID: 0}
+    - target: {fileID: 1245709919193902191, guid: ba357f66e9093c14a830e51264447fd4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2306242863139893001, guid: ba357f66e9093c14a830e51264447fd4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7721,10 +7746,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7141270070215697298, guid: ba357f66e9093c14a830e51264447fd4, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1710879289342719785, guid: 3e288f3c97706be49ac714734b02e275, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1245709919193902191, guid: ba357f66e9093c14a830e51264447fd4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1828571766}
   m_SourcePrefab: {fileID: 100100000, guid: ba357f66e9093c14a830e51264447fd4, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
