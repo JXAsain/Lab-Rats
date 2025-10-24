@@ -151,7 +151,7 @@ MonoBehaviour:
   dropSpeed: 0
   pauseTime: 0
   dropDistance: 0
-  playerSpawn: {fileID: 0}
+  currentSceneID: 0
 --- !u!114 &1129492458847753266
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -167,3 +167,4 @@ MonoBehaviour:
   sprites:
   - {fileID: 1922014845489682711, guid: 74ab1c8c95a09a44cb0cbdae2782e016, type: 3}
   - {fileID: -7209643430026270035, guid: 11cb0d5ac0a07af45ad483fd83fbc938, type: 3}
+  switchInterval: 0.2
