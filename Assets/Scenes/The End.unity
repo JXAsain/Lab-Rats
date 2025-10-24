@@ -495,6 +495,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Remi
       objectReference: {fileID: 0}
+    - target: {fileID: 7812797755063619204, guid: 1938ff91193bdc5458c10a5ccdb1f334, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
