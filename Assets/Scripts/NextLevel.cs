@@ -6,13 +6,12 @@ using UnityEngine.SceneManagement;
 
 public class NextLevel : MonoBehaviour
 {
-
+    [Header("Next Level Index Below")]
     public int sceneBuildIndex;
 
+    [Header("Etc.")]
     public Animator transition;
-
     public float transitionTime = 1f;
-
     public int currentSceneID;
 
 
