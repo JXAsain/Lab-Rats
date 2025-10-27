@@ -2913,6 +2913,10 @@ PrefabInstance:
       propertyPath: canFastDrop
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1027750629408773046, guid: 1938ff91193bdc5458c10a5ccdb1f334, type: 3}
+      propertyPath: canWallClimb
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3841904657999878412, guid: 1938ff91193bdc5458c10a5ccdb1f334, type: 3}
       propertyPath: m_Color.b
       value: 0.4610139

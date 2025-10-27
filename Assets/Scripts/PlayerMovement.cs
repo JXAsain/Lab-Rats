@@ -12,9 +12,12 @@ public class PlayerMovement : MonoBehaviour
     private float fastDropSpeed = -20f;    // Force applied when fast dropping
     private bool isFacingRight = true;     // Tracks which way the player sprite is currently facing
 
-    private bool isWallSliding;
-    private float wallSlidingSpeed = 2f;
+    private bool isWallClimbing;
     
+    //private float wallSlidingSpeed = 2f;
+
+    private float climbSpeed = 8f;
+
     private bool isWallJumping;
     private float wallJumpingDirection;
     private float wallJumpingTime = 0.2f;
@@ -31,6 +34,8 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] private bool canSprint = true;
     [SerializeField] private bool canFastDrop = true;
+    [SerializeField] private bool canWallClimb = true;
+
 
 
     // Called every frame (handles input and simple logic)
@@ -56,7 +61,7 @@ public class PlayerMovement : MonoBehaviour
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, fastDropSpeed);
         }
 
-        WallSlide();
+        WallClimbing();
         WallJump();
 
         if (!isWallJumping)
@@ -98,22 +103,29 @@ public class PlayerMovement : MonoBehaviour
         return Physics2D.OverlapCircle(wallCheck.position, 0.2f, wallLayer);
     }
 
-    private void WallSlide()
+    private void WallClimbing()
     {
-        if (IsWalled() && !IsGrounded() && horizontal != 0f)
+        if (canWallClimb && IsWalled() && !IsGrounded() && horizontal != 0f)
         {
-            isWallSliding = true;
-            rb.linearVelocity = new Vector2(rb.linearVelocity.x, Mathf.Clamp(rb.linearVelocity.y, -wallSlidingSpeed, float.MaxValue));
+            isWallClimbing = true;
+
+            float verticalInput = Input.GetAxisRaw("Vertical"); // -1 (down), 0 (none), 1 (up)
+
+            // Apply vertical movement based on input
+            rb.linearVelocity = new Vector2(0f, verticalInput * climbSpeed); rb.gravityScale = 0f; // Disable gravity while sticking
+
         }
         else
         {
-            isWallSliding=false;
+            isWallClimbing=false;
+            rb.gravityScale = 4f; // Restore normal gravity
+
         }
     }
 
     private void WallJump()
     {
-        if (isWallSliding)
+        if (isWallClimbing)
         {
             isWallJumping = false;
             wallJumpingDirection = -transform.localScale.x;
