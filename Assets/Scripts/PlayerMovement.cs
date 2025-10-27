@@ -1,6 +1,7 @@
 using System.Collections;                 
 using System.Collections.Generic;         
 using UnityEngine;
+using UnityEngine.Pool;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -11,9 +12,22 @@ public class PlayerMovement : MonoBehaviour
     private float fastDropSpeed = -20f;    // Force applied when fast dropping
     private bool isFacingRight = true;     // Tracks which way the player sprite is currently facing
 
+    private bool isWallSliding;
+    private float wallSlidingSpeed = 2f;
+    
+    private bool isWallJumping;
+    private float wallJumpingDirection;
+    private float wallJumpingTime = 0.2f;
+    private float wallJumpingCounter;
+    private float wallJumpingDuration = 0.4f;
+    private Vector2 wallJumpingPower = new Vector2(8f, 16f);
+
     [SerializeField] private Rigidbody2D rb;        // Reference to Rigidbody2D for movement physics
     [SerializeField] private Transform groundCheck; // Position below player to check if grounded
     [SerializeField] private LayerMask groundLayer; // Defines what counts as "ground"
+    [SerializeField] private Transform wallCheck;
+    [SerializeField] private LayerMask wallLayer;
+
 
     [SerializeField] private bool canSprint = true;
     [SerializeField] private bool canFastDrop = true;
@@ -42,8 +56,13 @@ public class PlayerMovement : MonoBehaviour
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, fastDropSpeed);
         }
 
-        Flip(); // Flip sprite direction if player changes movement direction
+        WallSlide();
+        WallJump();
 
+        if (!isWallJumping)
+        {
+            Flip();
+        }
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             Application.Quit();
@@ -72,6 +91,63 @@ public class PlayerMovement : MonoBehaviour
     {
         // Creates an invisible circle at groundCheck's position, checks collision with groundLayer
         return Physics2D.OverlapCircle(groundCheck.position, 1f, groundLayer);
+    }
+
+    private bool IsWalled()
+    {
+        return Physics2D.OverlapCircle(wallCheck.position, 0.2f, wallLayer);
+    }
+
+    private void WallSlide()
+    {
+        if (IsWalled() && !IsGrounded() && horizontal != 0f)
+        {
+            isWallSliding = true;
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, Mathf.Clamp(rb.linearVelocity.y, -wallSlidingSpeed, float.MaxValue));
+        }
+        else
+        {
+            isWallSliding=false;
+        }
+    }
+
+    private void WallJump()
+    {
+        if (isWallSliding)
+        {
+            isWallJumping = false;
+            wallJumpingDirection = -transform.localScale.x;
+            wallJumpingCounter = wallJumpingTime;
+
+            CancelInvoke(nameof(StopWallJumping));
+        }
+        else 
+        {
+            wallJumpingCounter -= Time.deltaTime;
+        }
+
+        if (Input.GetButtonDown("Jump") && wallJumpingCounter > 0f) 
+        {
+            isWallJumping=true;
+            rb.linearVelocity = new Vector2(wallJumpingDirection * wallJumpingPower.x, wallJumpingPower.y);
+            wallJumpingCounter = 0f;
+
+            if (transform.localScale.x != wallJumpingDirection)
+            {
+                isFacingRight = !isFacingRight;
+                Vector3 localScale = transform.localScale;
+                localScale.x *= -1f;
+                transform.localScale = localScale;
+            }
+
+            Invoke(nameof(StopWallJumping), wallJumpingDuration);
+        }
+
+    }
+
+    private void StopWallJumping()
+    {
+        isWallJumping = false;
     }
 
     // Flips the player sprite if moving left/right opposite to current facing direction
