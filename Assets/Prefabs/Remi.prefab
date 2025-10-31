@@ -131,6 +131,7 @@ GameObject:
   - component: {fileID: 2649778272060296491}
   - component: {fileID: 707434616146310573}
   - component: {fileID: 1027750629408773046}
+  - component: {fileID: 7033131019875502531}
   m_Layer: 0
   m_Name: Remi
   m_TagString: Player
@@ -306,3 +307,26 @@ MonoBehaviour:
     m_Bits: 128
   canSprint: 0
   canFastDrop: 0
+  canWallClimb: 0
+--- !u!95 &7033131019875502531
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7812797755063619204}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8ce41559ffaa4434fa9bd591556dd587, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

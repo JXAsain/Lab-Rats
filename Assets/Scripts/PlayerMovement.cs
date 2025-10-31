@@ -5,6 +5,7 @@ using UnityEngine.Pool;
 
 public class PlayerMovement : MonoBehaviour
 {
+    private Animator animator;
     private float horizontal;              // Stores horizontal input (-1 for left, 1 for right, 0 for none)
     private float speed = 8f;              // Movement speed multiplier
     private float sprintSpeed = 12f;
@@ -36,7 +37,11 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private bool canFastDrop = true;
     [SerializeField] private bool canWallClimb = true;
 
+    private void Start()
+    {
+        animator = GetComponent<Animator>();
 
+    }
 
     // Called every frame (handles input and simple logic)
     private void Update()
@@ -63,6 +68,15 @@ public class PlayerMovement : MonoBehaviour
 
         WallClimbing();
         WallJump();
+
+        if (rb.linearVelocity != Vector2.zero)
+        {
+            animator.SetBool("moving", true);
+        }
+        else
+        {
+            animator.SetBool("moving", false);
+        }
 
         if (!isWallJumping)
         {
