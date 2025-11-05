@@ -37,6 +37,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private bool canFastDrop = true;
     [SerializeField] private bool canWallClimb = true;
 
+
+
     private void Start()
     {
         animator = GetComponent<Animator>();
@@ -82,12 +84,18 @@ public class PlayerMovement : MonoBehaviour
         {
             Flip();
         }
+
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            Application.Quit();
+            Application.Quit();  
         }
 
-      
+        if (Input.GetKeyDown(KeyCode.F)) // DO A FLIP
+        {
+            StartCoroutine(RotateStepByStep());
+        }
+
+
     }
 
     // Called on a fixed time interval (better for physics updates)
@@ -127,11 +135,40 @@ public class PlayerMovement : MonoBehaviour
 
             // Apply vertical movement based on input
             rb.linearVelocity = new Vector2(0f, verticalInput * climbSpeed); rb.gravityScale = 0f; // Disable gravity while sticking
-
+                                                                                                   //if (horizontal < 0) // When facing left
+                                                                                                   //{
+                                                                                                   //    if (verticalInput > 0) // Facing up
+                                                                                                   //    {
+                                                                                                   //        transform.Rotate(0, 0, 270);
+                                                                                                   //    }
+                                                                                                   //    else if (verticalInput < 0) // facing down
+                                                                                                   //    {
+                                                                                                   //            transform.Rotate(0, 0, -90);
+                                                                                                   //    }
+                                                                                                   //    else // default to facing up
+                                                                                                   //    {
+                                                                                                   //        transform.Rotate(0, 0, 270);
+                                                                                                   //    } 
+                                                                                                   //}
+                                                                                                   //if (horizontal > 0) // When facing right
+                                                                                                   //{
+                                                                                                   //    if (verticalInput > 0) // Facing up
+                                                                                                   //    {
+                                                                                                   //        transform.Rotate(0, 0, 90);
+                                                                                                   //    }
+                                                                                                   //    else if (verticalInput < 0) //facing down
+                                                                                                   //    {
+                                                                                                   //        transform.Rotate(0, 0, -90);
+                                                                                                   //    }
+                                                                                                   //    else // Default to facing up
+                                                                                                   //    {
+                                                                                                   //        transform.Rotate(0, 0, 90); 
+                                                                                                   //    }
+                                                                                                   //}
         }
         else
         {
-            isWallClimbing=false;
+            isWallClimbing = false;
             rb.gravityScale = 4f; // Restore normal gravity
 
         }
@@ -188,4 +225,15 @@ public class PlayerMovement : MonoBehaviour
             transform.localScale = localScale;            // Apply the flipped scale
         }
     }
+
+    private IEnumerator RotateStepByStep() // DO A FLIP
+    {
+        for (int i = 0; i < 4; i++)
+        {
+            transform.Rotate(0, 0, 90);
+            yield return new WaitForSeconds(0.1f); // wait 0.1 seconds between each step
+        }
+    }
+
+
 }
