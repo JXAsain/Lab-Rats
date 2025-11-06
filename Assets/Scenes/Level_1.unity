@@ -7425,7 +7425,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1027750629408773046, guid: 1938ff91193bdc5458c10a5ccdb1f334, type: 3}
       propertyPath: canWallClimb
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7812797755063619204, guid: 1938ff91193bdc5458c10a5ccdb1f334, type: 3}
       propertyPath: m_Name
@@ -7436,6 +7436,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1938ff91193bdc5458c10a5ccdb1f334, type: 3}
+--- !u!4 &1081238790551817974 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 696409957717840780, guid: 1938ff91193bdc5458c10a5ccdb1f334, type: 3}
+  m_PrefabInstance: {fileID: 1081238790551817973}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2528163321783940873
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7559,11 +7564,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 19ced83d54658c845ae93b020750d18f, type: 3}
---- !u!1 &6902527693806898755 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7812797755063619204, guid: 1938ff91193bdc5458c10a5ccdb1f334, type: 3}
-  m_PrefabInstance: {fileID: 1081238790551817973}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8015446478309626039
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7619,7 +7619,7 @@ PrefabInstance:
     - target: {fileID: 7011825745105626914, guid: e1419987010d46846a844b04d2964063, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 6902527693806898755}
+      objectReference: {fileID: 1081238790551817974}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
