@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7141270070215697298}
   - component: {fileID: 6855211497044518275}
   - component: {fileID: 664159770355546637}
+  - component: {fileID: 6365469213282609205}
   m_Layer: 0
   m_Name: Gator
   m_TagString: Hazard
@@ -147,7 +148,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad15aef67a5d19a4fa75c39dd19997cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 7
+  moveSpeed: 10
   moveDistance: 100
   moveRight: 1
-  currentSceneID: 2
+  currentSceneID: 3
+--- !u!114 &6365469213282609205
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1245709919193902191}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7a37242c8a607042a8c3271cb931d59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: -1710879289342719785, guid: 3e288f3c97706be49ac714734b02e275, type: 3}
+  - {fileID: -134969597513695885, guid: f0d5978eca726de48a520743c36e6884, type: 3}
+  - {fileID: 3305685054942234606, guid: 101c936b12b636446a21ddad86ed8e90, type: 3}
+  switchInterval: 0.1
