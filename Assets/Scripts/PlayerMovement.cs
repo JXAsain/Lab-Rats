@@ -25,14 +25,20 @@ public class PlayerMovement : MonoBehaviour
     private float wallJumpingCounter;
     private float wallJumpingDuration = 0.4f;
     private Vector2 wallJumpingPower = new Vector2(8f, 16f);
-
+    
+    [Header("Surface Checks")]
     [SerializeField] private Rigidbody2D rb;        // Reference to Rigidbody2D for movement physics
     [SerializeField] private Transform groundCheck; // Position below player to check if grounded
     [SerializeField] private LayerMask groundLayer; // Defines what counts as "ground"
     [SerializeField] private Transform wallCheck;
     [SerializeField] private LayerMask wallLayer;
+    
+    [Header("Sprites")]
+    [SerializeField] private Sprite[] sprites;
+    [SerializeField] private SpriteRenderer spriteRenderer;
+    [SerializeField] private int currentIndex = 0;
 
-
+    [Header("Movement Actives")]
     [SerializeField] private bool canSprint = true;
     [SerializeField] private bool canFastDrop = true;
     [SerializeField] private bool canWallClimb = true;
@@ -129,47 +135,59 @@ public class PlayerMovement : MonoBehaviour
     {
         if (canWallClimb && IsWalled() && !IsGrounded() && horizontal != 0f)
         {
+            animator.enabled = false; // Disable animation control while wall climbing
             isWallClimbing = true;
 
             float verticalInput = Input.GetAxisRaw("Vertical"); // -1 (down), 0 (none), 1 (up)
 
             // Apply vertical movement based on input
             rb.linearVelocity = new Vector2(0f, verticalInput * climbSpeed); rb.gravityScale = 0f; // Disable gravity while sticking
-                                                                                                   //if (horizontal < 0) // When facing left
-                                                                                                   //{
-                                                                                                   //    if (verticalInput > 0) // Facing up
-                                                                                                   //    {
-                                                                                                   //        transform.Rotate(0, 0, 270);
-                                                                                                   //    }
-                                                                                                   //    else if (verticalInput < 0) // facing down
-                                                                                                   //    {
-                                                                                                   //            transform.Rotate(0, 0, -90);
-                                                                                                   //    }
-                                                                                                   //    else // default to facing up
-                                                                                                   //    {
-                                                                                                   //        transform.Rotate(0, 0, 270);
-                                                                                                   //    } 
-                                                                                                   //}
-                                                                                                   //if (horizontal > 0) // When facing right
-                                                                                                   //{
-                                                                                                   //    if (verticalInput > 0) // Facing up
-                                                                                                   //    {
-                                                                                                   //        transform.Rotate(0, 0, 90);
-                                                                                                   //    }
-                                                                                                   //    else if (verticalInput < 0) //facing down
-                                                                                                   //    {
-                                                                                                   //        transform.Rotate(0, 0, -90);
-                                                                                                   //    }
-                                                                                                   //    else // Default to facing up
-                                                                                                   //    {
-                                                                                                   //        transform.Rotate(0, 0, 90); 
-                                                                                                   //    }
-                                                                                                   //}
+            if (horizontal < 0) // When facing left
+            {
+                if (verticalInput > 0) // Facing up
+                {
+                    currentIndex = 1;
+                    spriteRenderer.sprite = sprites[currentIndex];
+
+                }
+                else if (verticalInput < 0) // facing down
+                {
+                    currentIndex = 2;
+                    spriteRenderer.sprite = sprites[currentIndex];
+                }
+                else // default to facing up
+                {
+                    currentIndex = 1;
+                    spriteRenderer.sprite = sprites[currentIndex];
+                }
+            }
+            if (horizontal > 0) // When facing right
+            {
+                if (verticalInput > 0) // Facing up
+                {
+                    currentIndex = 1;
+                    spriteRenderer.sprite = sprites[currentIndex];
+                }
+                else if (verticalInput < 0) //facing down
+                {
+                    currentIndex = 2;
+                    spriteRenderer.sprite = sprites[currentIndex];
+                }
+                else // Default to facing up
+                {
+                    currentIndex = 1;
+                    spriteRenderer.sprite = sprites[currentIndex];
+                }
+            }
         }
         else
         {
+            animator.enabled = true; 
             isWallClimbing = false;
             rb.gravityScale = 4f; // Restore normal gravity
+            
+            currentIndex = 0;
+            spriteRenderer.sprite = sprites[currentIndex];
 
         }
     }

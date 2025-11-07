@@ -29,8 +29,8 @@ Transform:
   m_GameObject: {fileID: 3876737396021398560}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 25.87, y: 11.67, z: 0}
-  m_LocalScale: {x: 1.1996193, y: 1.0000339, z: 1}
+  m_LocalPosition: {x: 25.87, y: 16, z: 0}
+  m_LocalScale: {x: 0.5, y: 6, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -80,7 +80,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
-  m_Color: {r: 0.2256719, g: 0.06659304, b: 0.7509433, a: 1}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -166,7 +166,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24a661977d67b594aac24325d35117a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dropSpeed: 20
+  dropSpeed: 30
   pauseTime: 1
-  dropDistance: 20
-  playerSpawn: {fileID: 0}
+  dropDistance: 30
+  currentSceneID: 1

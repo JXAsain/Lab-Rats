@@ -282,7 +282,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.2, y: 0.167}
+  m_Size: {x: 0.167, y: 0.167}
   m_EdgeRadius: 0
 --- !u!114 &1027750629408773046
 MonoBehaviour:
@@ -305,9 +305,15 @@ MonoBehaviour:
   wallLayer:
     serializedVersion: 2
     m_Bits: 128
+  sprites:
+  - {fileID: -3366245860795902121, guid: 6549972129735114385f0a9ccece2e76, type: 3}
+  - {fileID: 4980497870678115623, guid: 2f89bd4e74c2ce84b93cad6787a191fe, type: 3}
+  - {fileID: -8680790594720058358, guid: 89af95201d032524ca8e1e0b07a8b82d, type: 3}
+  spriteRenderer: {fileID: 4189906960601980544}
+  currentIndex: 0
   canSprint: 0
   canFastDrop: 0
-  canWallClimb: 0
+  canWallClimb: 1
 --- !u!95 &7033131019875502531
 Animator:
   serializedVersion: 7
