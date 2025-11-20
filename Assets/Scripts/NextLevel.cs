@@ -19,9 +19,51 @@ public class NextLevel : MonoBehaviour
     // Move game to another scene
     private void Update()
     {
+        //Restart level
         if (Input.GetKeyDown(KeyCode.R))
         {
             SceneManager.LoadScene(currentSceneID, LoadSceneMode.Single);
+        }
+
+        // Move to main menu
+        if (Input.GetKeyDown(KeyCode.Alpha0))
+        {
+            SceneManager.LoadScene(0, LoadSceneMode.Single);
+        }
+        // Move to level 1
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            SceneManager.LoadScene(1, LoadSceneMode.Single);
+        }
+
+        // Move to level 2
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            SceneManager.LoadScene(2, LoadSceneMode.Single);
+        }
+
+        // Move to level 3
+        if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            SceneManager.LoadScene(3, LoadSceneMode.Single);
+        }
+
+        // Move to level 4
+        if (Input.GetKeyDown(KeyCode.Alpha4))
+        {
+            SceneManager.LoadScene(4, LoadSceneMode.Single);
+        }
+
+        // Move to level 5
+        if (Input.GetKeyDown(KeyCode.Alpha5))
+        {
+            SceneManager.LoadScene(5, LoadSceneMode.Single);
+        }
+
+        // Move to level 6
+        if (Input.GetKeyDown(KeyCode.Alpha6))
+        {
+            SceneManager.LoadScene(6, LoadSceneMode.Single);
         }
     }
     private void OnTriggerEnter2D(Collider2D other)
