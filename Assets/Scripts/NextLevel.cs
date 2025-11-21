@@ -11,6 +11,7 @@ public class NextLevel : MonoBehaviour
 
     [Header("Etc.")]
     public Animator transition;
+    public Animator cheese;
     public float transitionTime = 1f;
     public int currentSceneID;
 
@@ -82,6 +83,7 @@ public class NextLevel : MonoBehaviour
         IEnumerator LoadLevel(int sceneBuildIndex)
         {
             transition.SetTrigger("Start");
+            cheese.SetTrigger("Collect");
 
             yield return new WaitForSeconds(transitionTime);
 

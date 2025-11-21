@@ -12783,7 +12783,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4250353920866114490, guid: ba3ea0710e7981b4eb828a926e14048c, type: 3}
       propertyPath: sceneBuildIndex
-      value: 4
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6469077582673109326, guid: ba3ea0710e7981b4eb828a926e14048c, type: 3}
       propertyPath: m_FlipX

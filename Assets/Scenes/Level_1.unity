@@ -4765,8 +4765,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneBuildIndex: 2
   transition: {fileID: 1934591982}
+  cheese: {fileID: 1344502790}
   transitionTime: 1
   currentSceneID: 1
+--- !u!95 &1344502790 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 2744205874314970292, guid: ba3ea0710e7981b4eb828a926e14048c, type: 3}
+  m_PrefabInstance: {fileID: 2528163321783940873}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1364110379
 GameObject:
   m_ObjectHideFlags: 0
