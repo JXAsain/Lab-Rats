@@ -4766,7 +4766,7 @@ MonoBehaviour:
   sceneBuildIndex: 2
   transition: {fileID: 1934591982}
   transitionTime: 1
-  currentSceneID: 0
+  currentSceneID: 1
 --- !u!1 &1364110379
 GameObject:
   m_ObjectHideFlags: 0
