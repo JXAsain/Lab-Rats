@@ -65,6 +65,13 @@ public class NextLevel : MonoBehaviour
         {
             SceneManager.LoadScene(6, LoadSceneMode.Single);
         }
+
+        // Move to level 7
+        if (Input.GetKeyDown(KeyCode.Alpha7))
+        {
+            SceneManager.LoadScene(7, LoadSceneMode.Single);
+        }
+
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
