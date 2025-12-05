@@ -110,7 +110,7 @@ public class PlayerMovement : MonoBehaviour
         // Decide which speed to use
         float currentSpeed = speed;
 
-        if (canSprint &&  Input.GetKey(KeyCode.LeftShift))
+        if (canSprint &&  (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift)))
         {
             currentSpeed = sprintSpeed;
         }
